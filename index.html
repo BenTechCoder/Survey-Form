@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--
+    this is how you comment
+-->
+<html>
+    <!--this is the link to the CSS for the form and main element
+    8/21/2020-->
+      <!--The name attribute specifies the name of an <input> element.
+         The name attribute is used to reference elements in a JavaScript, 
+        or to reference form data after a form is submitted. 8/28/2020-->
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!--This is the link to the JS for Testing-->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<body id="main">
+<div class="container">
+  <header class="header">
+
+    <h1 id="title" class="text-center">What are your Technology preferences?</h1>
+    <h3 id="blog-header">From BenTechCode.blogspot.com</h3>
+    <p id="description" class="description">Thank you for taking this survey! This survey improves the content of the blog to accommodate all users.</p>
+</header>
+<!--The form is below this line-->
+<form id="survey-form">
+    <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Enter Name Here"
+        required
+        />
+</div>
+
+<div class="form-group">
+<label id="email-label" for="email">Email</label>
+<input
+type="email"
+name="email"
+id="email"
+class="form-control"
+placeholder="Enter Your Email Please"
+required/>
+</div>
+
+<div class="form-group">
+
+    <label id="number-label" for="number"
+    >Age<span class="clue">(optional)</span></label
+  >
+
+  <input
+    type="number"
+    name="age"
+    id="number"
+    min="10"
+    max="99"
+    class="form-control"
+    placeholder="Age"
+  />
+
+</div>
+<div class="form-group">
+<p>What OS do you use as your main computer Operating system?</p>
+<select name="Computer OS Dropdown" id="dropdown" class="form-control" required>
+
+<option disabled selected value>Select OS</option>
+<option value="Windows 10">Windows 10</option>
+<option value="Windows 7">Windows 7</option>
+<option value="Mac OS">Mac OS</option>
+<option value="ChromeOS-desktop"> Chrome OS </option>
+<option value="Linux">Linux</option>
+<option value="iPadOS-desktop">iPadOS</option>
+<option value="Other-computerOS">Other</option>
+</select>
+</div>
+
+<div class="form group">
+  <p>If you selected "other" please explain your selection</p>
+  <input type="text" name="other-textbox" id="textbox-computer">
+</div>
+
+<div class="form-group">
+<p>What OS does your Phone use?</p>
+<select name="Phone OS Dropdown" id="phone-dropdown" class="form-control" required>
+<option disabled selected value>Select OS</option>
+<option value="iOS(iPhone)">iOS/iPhone</option>
+<option value="Android">Android</option>
+<option value="Linux">Linux</option>
+<option value="other-PhoneOS">Other</option>
+</select>
+</div>
+
+<div class="form group">
+  <p>If you selected "other" or "Linux" please explain your selection</p>
+  <input type="text" name="other-textbox" id="textbox-other-phone">
+</div>
+
+<div class="form-group">
+<p>What OS does your Tablet use?(optional)</p>
+<select name="Tablet OS Dropdown" id="tablet-dropdown" class="form-control">
+<option disabled selected value>Select OS</option>
+<option value="iPad OS(iPad)">iPadOS(iPad)</option>
+<option value="Android">Android</option>
+<option value="Windows tablet">Windows 10</option>
+<option value="ChromeOS-Tablet">Chrome OS</option>
+<option value="Linux">Linux</option>
+<option value="other-TabletOS">Other</option>
+</select>
+</div>
+
+<div class="form group">
+  <p>If you selected "other" or "Linux" please explain your selection</p>
+  <input type="text" name="other-textbox" id="textbox-other">
+</div>
+
+<div class="form-group">
+
+<p>Would you recommend BenTechCode to a friend?</p>
+<label>
+  <input
+  name="user-recommend"
+  value="definitely"
+  type="radio"
+  class="input-radio"
+  checked
+  />
+For Sure!</label>
+<label>
+  <input
+  name="user-recommend"
+  value="maybe"
+  type="radio"
+  class="input-radio"
+checked
+  > Not so Sure....
+</label>
+
+<label>
+  <input
+  name="user-recommend"
+  value="no"
+  type="radio"
+  class="input-radio"
+  checked>
+Never</label>
+</div>
+
+<div class="form-group">
+  <p>What topics would like more coverage of?
+  <span class="clue">(Check all that apply)</span></p>
+
+<label>
+<input 
+name="prefer"
+value="Android-Wear OS-ChromeOS"
+type="checkbox"
+class="input-checkbox"
+>Android-WearOS-ChromeOS</label>
+<label>
+  <input 
+  name="prefer"
+  value="Apple"
+  type="checkbox"
+  class="input-checkbox"
+  >Apple
+</label>
+<label>
+  <input 
+  name="prefer"
+  value="coding and development"
+  type="checkbox"
+  class="input-checkbox"
+>Coding and Development
+</label>
+<label>
+  <input 
+  name="prefer"
+  value="Windows and Microsoft"
+  type="checkbox"
+  class="input-checkbox"
+  >Windows and Microsoft
+</label>
+<label>
+<input 
+name="prefer"
+value="reviews"
+type="checkbox"
+class="input-checkbox"
+>Reviews
+</label>
+<label>
+<input 
+name="prefer"
+value="Video"
+type="checkbox"
+class="input-checkbox"
+>Video</label>
+<label>
+  <input
+  name="prefer"
+  value="content creation"
+  type="checkbox"
+  class="input-checkbox"
+  >Content Creation
+</label>
+</div>
+
+<div class="form-group">
+  <p>Any comments or suggestions?</p>
+  <textarea
+    id="comments"
+    class="input-textarea"
+    name="comment"
+    placeholder="Enter your comment here..."
+    rows="6"
+  ></textarea>
+</div>
+
+<div class="form-group">
+  <button type="submit" id="submit" class="submit-button">
+    Submit
+  </button>
+  <!--Make sure you implement a link to an html page where you can view the results of the survey-9/9/2020-->
+</div>
+<div id="Blog-Attribution">
+<h3>For more content please visit BenTechCode.blogspot.com</h3>
+</div>
+</form>
+</div>
+</body>
+
+</html>
